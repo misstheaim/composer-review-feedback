@@ -1,0 +1,29 @@
+name: Idea
+description: Suggest a feature or an improvement.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for the report. **Composer: Report a Problem** in VS Code (or asking Claude to report it) fills in the environment for you."
+  - type: textarea
+    id: description
+    attributes:
+      label: Your idea
+      description: What would you like Composer to do, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Versions, OS and Doctor results (filled in by Composer).
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Recent Composer and helper log lines (filled in by Composer; paths are shortened).
+      render: text
